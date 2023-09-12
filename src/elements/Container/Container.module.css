@@ -1,0 +1,16 @@
+.container_element {
+  margin: auto;
+  max-width: 1200px;
+  overflow: auto;
+  padding: 0px 20px;
+  border: 2px solid blue;
+  padding-top: 35px;
+  margin-top: 40px;
+  height: 70vh;
+  /* border-radius: 20px; */
+
+  /* margin: auto; */
+  /* max-width: 1100px; */
+  /* overflow: auto; */
+  /* padding: 0 20px; */
+}

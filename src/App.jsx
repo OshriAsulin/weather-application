@@ -1,14 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import { useThemeStore } from "./themeStore";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import Favorite from "./pages/Favorites";
+import Weather from "./pages/Weather";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>
-  
-  </>;
+  const { mode } = useThemeStore();
+  const theme = createTheme({
+    palette: {
+      mode,
+    },
+  });
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Weather />} />
+          <Route path="/favorites" element={<Favorite />} />
+        </Routes>
+      </ThemeProvider>
+    </>
+  );
 }
 
 export default App;
