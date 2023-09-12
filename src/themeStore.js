@@ -4,7 +4,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
  
   
 export const useThemeStore = create(persist((set) => ({
-  mode: "dark",
+  mode: "light",
   toggleColorMode: () => {
     set((state) => ({
       mode: state.mode === "light" ? "dark" : "light",
