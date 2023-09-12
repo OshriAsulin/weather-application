@@ -1,7 +1,7 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
-import Container from "../elements/Container/Container";
-import Box from "@mui/material/Box";
+import { Helmet } from "react-helmet";
+import SearchBar from "../components/SearchBar";
+import CityWeatherInfoContainer from "../components/CityWeatherInfoContainer";
 
 const Weather = () => {
   const divStyle = {
@@ -13,16 +13,15 @@ const Weather = () => {
   };
   return (
     <>
-      <div style={divStyle}>
-        <TextField
-          sx={{ width: "50%", marginTop: 5 }}
-          placeholder="Search a city"
-        />
-      </div>
-      <Container>
-
-        
-      </Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Weather App - Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      {/* <div style={divStyle}> */}
+        <SearchBar />
+      {/* </div> */}
+      <CityWeatherInfoContainer/>
     </>
   );
 };
