@@ -19,7 +19,7 @@ const Weather = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       {/* <div style={divStyle}> */}
-        <SearchBar />
+        {/* <SearchBar /> */}
       {/* </div> */}
       <CityWeatherInfoContainer/>
     </>

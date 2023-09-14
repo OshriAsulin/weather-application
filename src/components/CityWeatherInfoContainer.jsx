@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "../elements/Container/Container";
 const CityWeatherInfoContainer = () => {
-  return <Container>
+  return (<Container>
     
-  </Container>;
+  </Container>);
 };
 
 export default CityWeatherInfoContainer;

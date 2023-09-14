@@ -1,11 +1,10 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
-import SearchIcon from "@material-ui/icons/Search";
+
 
 const SearchBar = () => {
   return (
     <div className="search_bar">
-      <TextField
+      {/* <TextField
         sx={{ width: "100%" }} // Adjust the padding to fit the search icon
         placeholder="Search a city"
       />
@@ -19,7 +18,7 @@ const SearchBar = () => {
           zIndex: 1,
           cursor: "pointer"
         }}
-      />
+      /> */}
     </div>
   );
 };
