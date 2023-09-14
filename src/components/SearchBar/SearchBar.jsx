@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./SearchBar.module.css";
-
+import axios from "axios";
 const SearchBar = () => {
+  const [cityName, setCityName] = useState("");
+  // const [results, setResults] = useState([]);
 
-const [cityName, setCityName] = useState('')
+  useEffect(() => {
+    if (cityName) {
+      const apiUrl =`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${import.meta.env.VITE_API_KEY}&q=${cityName}`;
 
-  const searchCity = async () => {
-    const response = await fetch(`/api/weatherData?city=${cityName}`);
-    const data = await response.json();
-    console.log(data);
-    console.log(cityName)
-  };
-
+      // Make the GET request to the AccuWeather API
+      axios.get(apiUrl)
+      
+        .then((response) => {
+          // setResults(response.data);
+          console.log('res',response.data)
+          // console.log('results',results)
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+  }, [cityName]);
 
   return (
     <div className={style.search_bar}>
@@ -20,9 +30,11 @@ const [cityName, setCityName] = useState('')
         className={style.search_input}
         placeholder="Search a city"
         value={cityName}
-        onChange={(e)=>setCityName(e.target.value)}
+        onChange={(e) => setCityName(e.target.value)}
       />
-      <span className={`material-symbols-outlined ${style.search_icon}`} onClick={searchCity}>
+      <span
+        className={`material-symbols-outlined ${style.search_icon}`}
+      >
         search
       </span>
     </div>
