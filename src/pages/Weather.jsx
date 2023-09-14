@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import SearchBar from "../components/SearchBar";
-import CityWeatherInfoContainer from "../components/CityWeatherInfoContainer";
+import SearchBar from "../components/SearchBar/SearchBar";
+import CityWeatherInfoContainer from "../components/CityWeatherInfoContainer/CityWeatherInfoContainer";
 
 const Weather = () => {
   const divStyle = {
@@ -19,7 +19,7 @@ const Weather = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       {/* <div style={divStyle}> */}
-        {/* <SearchBar /> */}
+        <SearchBar />
       {/* </div> */}
       <CityWeatherInfoContainer/>
     </>

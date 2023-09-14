@@ -12,15 +12,4 @@
   flex-wrap: wrap;
 }
 
-.search_bar {
-  margin: auto;
-  position: relative;
-  width: 50%;
-  margin-top: 30px;
-}
 
-@media(max-width:767px) {
-  .search_bar {
-    width: 90%;
-  }
-}

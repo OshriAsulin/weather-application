@@ -14,17 +14,21 @@ header{
 
 .title{
     /* padding: 5px; */
+    
 }
 
 .title a{
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* color: #fff; */
+
 }
 
 
 .nav_links {
     display: flex;
     list-style: none;
+
 }
 
 .nav_links li {
@@ -35,6 +39,8 @@ header{
 .nav_links li a {
     text-decoration: none;
     font-weight: bold;
+    /* color: #fff; */
+
 }
 
 

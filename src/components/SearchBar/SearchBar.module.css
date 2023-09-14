@@ -1,0 +1,30 @@
+
+.search_bar {
+    margin: auto;
+    position: relative;
+    width: 90%;
+    margin-top: 30px;
+  }
+  
+  .search_input {
+    width: 100%;
+    padding: 10px;
+    /* padding-right: 40px; Adjust the padding to fit the search icon */
+  }
+  
+  .search_icon {
+    position: absolute;
+    right: 5px; /* Adjust the left position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* @media(max-width:767px) {
+    .search_bar {
+      width: 90%;
+    }
+  }
+  
+   */
