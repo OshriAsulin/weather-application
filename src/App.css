@@ -1,3 +1,9 @@
+:root {
+  --primary-color: steelblue;
+  --secondary-color: skyblue;
+  --font-color: #f4f4f4;
+}
+
 * {
   margin: 0;
   padding: 0;
