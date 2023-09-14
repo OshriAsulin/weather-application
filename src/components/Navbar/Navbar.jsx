@@ -1,10 +1,7 @@
 import * as React from "react";
-// import { useThemeStore } from "../../themeStore";
-// import ThemeToggleMode from "../../ThemeToggleMode";
 import { Link } from "react-router-dom";
 import style from "./Nvabar.module.css";
 const Navbar = () => {
-  // const { mode, toggleColorMode } = useThemeStore();
 
   return (
     <header>

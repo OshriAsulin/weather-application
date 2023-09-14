@@ -1,9 +1,8 @@
-
-
 .first_content {
   display: flex;
   justify-content: space-between;
   border: 1px solid red;
+  padding: 15px;
 }
 
 .second_content{
